@@ -1,7 +1,7 @@
 <?php
 /*
 +-----------------------------------------------------------------------+
-| SkyApp, The PHP Application Framework.                                |
+| SkyApp - The PHP Application Framework.                               |
 | http://www.skyweb.ro/                                                 |
 +-----------------------------------------------------------------------+
 | This source file is released under LGPL license, available through    |
