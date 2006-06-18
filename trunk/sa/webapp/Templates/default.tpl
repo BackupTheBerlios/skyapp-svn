@@ -1,6 +1,4 @@
-Base href: {sabasehref}<br>
-<a href="{saurl page=nested/default}">nested</a>
-<a href="{saurl events=init:update page=default x=1 y="http://www.skyweb.ro/%2F a lipsum text test lalala korolimba" z="a b"}">self</a>
-"{$smarty.get.x}"<br>
-"{$smarty.get.y}"<br>
-"{$smarty.get.z}"
+<a href="{saurl page=default}">Self</a><br>
+<a href="{saurl page=nested/default}">Link to a nested page using smarty plugin</a><br>
+<a href="{saurl page=default events=init:update}">Some events</a><br>
+<a href="{saurl page=phpinfo}">phpinfo</a> (page without template)<br>

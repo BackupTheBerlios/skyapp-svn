@@ -1,2 +1,7 @@
 base referer
-rect $classSAPage.html 8,81 77,105
+rect $classSAPage.html 200,81 270,105
+rect $classDemoPage.html 191,156 279,180
+rect $classPage__404.html 6,231 88,255
+rect $classPage__default.html 112,231 211,255
+rect $classPage__nested__default.html 235,231 382,255
+rect $classPage__phpinfo.html 406,231 510,255

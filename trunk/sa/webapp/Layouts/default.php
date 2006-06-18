@@ -18,9 +18,28 @@ $Id$
 <html>
 <head>
 	<title>DemoApplication :: <?= $this->getContents('title') ?></title>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: .90em;
+		}
+	</style>
 </head>
 <body>
-<h1>Default</h1>
+<h1>Congratulations, SA is up and running</h1>
+<p>
+	<strong>Page name</strong>: <?= $this->pageName ?><br>
+	<strong>Layout</strong>: <?= $this->getLayoutDir() ?>/<?= $this->getLayout() ?><br>	
+	<strong>Page class</strong>: <?= $this->className ?><br>
+	<strong>Find me in</strong>: <?= $this->app->getPageSearchDirectory() ?>/<?= $this->getName() ?>.php<br>
+<?php
+if ($this->getTemplate()):
+?>
+	<strong>Smarty template</strong>: <?= $this->getTemplateDir() ?>/<?= $this->getTemplate() ?><br>
+<?php
+endif;
+?>
+</p>
 <?= $this->getContents(CONTENT_FOR_LAYOUT) ?>
 </body>
 </html>

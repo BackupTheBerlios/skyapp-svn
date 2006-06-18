@@ -19,5 +19,7 @@ class DemoPage extends SAPage {
 	function __construct(DemoApplication &$app, $name) {
 		parent::__construct($app, $name);
 		$this->setContents('title', ucwords(str_replace('/', ' &raquo; ', $this->name)));
+		$this->pageName = $this->getName();
+		$this->className = get_class($this);		
 	}
 }
