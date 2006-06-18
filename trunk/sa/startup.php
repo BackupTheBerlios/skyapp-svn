@@ -22,7 +22,7 @@ define('SA_WEBAPP_DIR', 'webapp/');
 define('SA_LOGS_DIR', 'logs/');
 define('SA_SECRET_KEY', 'monaco');
 define('SA_SESSION_NAME', 'sid');
-define('SA_SESSION_FORCE_COOKIES', false);
+define('SA_SESSION_FORCE_COOKIES', true);
 
 //includes for SA
 require_once(SA_SMARTY_DIR	.	'Smarty.class.php');
