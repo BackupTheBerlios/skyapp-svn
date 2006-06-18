@@ -15,14 +15,34 @@
 $Id$
 */
 
+/**
+ * If this is set to false, the SID will be appended to the URL if the client does not accept cookies
+ */
 define('SA_SESSION_FORCE_COOKIES', true);
+
+/*! \brief Class for creating SA valid URLs
+ * 
+ */
 
 class SAUrl {
 	private static $app;
-	
+
+	/**
+	 * Sets the application controller
+	 * @param SApplication $app The application controller instance
+	 */	
 	public static function setApplicationObject(SApplication &$app) {
 		self::$app = &$app;
 	}
+	
+	/**
+	 * Returns a valid SA URL
+	 * @param string @page The page name
+	 * @param array $params The GET parameters specified as a hash
+	 * @param int $port The port number if different than 80
+	 * @param boolean $secure Whether to use https or not
+	 * @return string A valid SA URL 
+	 */
 	
 	public static function url($page = null, $params = array(), $port = 80, $secure = false) {
 		$url = '';
@@ -57,10 +77,19 @@ class SAUrl {
 		return $url;
 	}
 	
+	/**
+	 * Used internally to append SID to the URL 
+	 */
+	
 	private function appendSid($url) {
 		$url .= (SID) ? '/' . session_name() . '/' . session_id() : '';
 		return $url; 
 	}
+	
+	/**
+	 * Used internally to append a check value to the URL which will ensure that the client
+	 * didn't alter the request
+	 */
 	
 	private function appendCheckValue($url) {
 		ereg(self::$app->getScriptPath() . '(.*)', $url, $matches);
@@ -68,7 +97,11 @@ class SAUrl {
 		return $url;
 	}
 	
-	public static function baseHref($secure = false) {
+	/**
+	 * @return string The absolute path of the web application
+	 */
+	
+	public static function baseHref() {
 		$baseHref = '';
 		$baseHref .= (self::$app->getServerSecure()) ? 'https' : 'http';
 		$baseHref .= '://';
@@ -77,6 +110,11 @@ class SAUrl {
 		$baseHref .= self::$app->getScriptPath();		
 		return $baseHref;			
 	}
+	
+	/**
+	 * Internal method for creating a valid GET parameter
+	 * Will base64 encode the value if it contains / or %
+	 */
 	
 	public static function encodeParam($value) {
 		$encoded = $value;

@@ -15,6 +15,10 @@
 $Id$
 */
 
+/*! \brief Smarty plugin for generating the absolute path of the web application within the template
+ * 
+ */
+
 function smarty_function_sabasehref($params, &$smarty) {
 	return SAUrl::baseHref();
 }

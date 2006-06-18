@@ -15,12 +15,25 @@
 $Id$
 */
 
+/*! \brief Class for handling the HTTP request
+ * 
+ */
+
 final class SARequest {
 	private static $app;
+
+	/**
+	 * Sets the application controller
+	 * @param SApplication $app The application controller instance
+	 */
 	
 	public static function setApplicationObject(SApplication &$app) {
 		self::$app = &$app;
-	} 
+	}
+	
+	/**
+	 * Initializes some default attributes for SApplication instance 
+	 */
 	
 	public static function init() {
 		self::$app->setServerName($_SERVER['SERVER_NAME']);
@@ -33,16 +46,25 @@ final class SARequest {
 		self::$app->setScriptPath($matches[1]);	
 	}
 	
+	/**
+	 * Checks if the user altered the request parameters.
+	 * This is done by checking the "chk" GET variable
+	 */
+	
 	public static function checkValidity() {		
 		ereg($_GET[self::$app->getGPPageName()] . "(.*)", self::$app->getPathInfo(), $matches);
 		if ($matches[1]) {
 			$uri = $_SERVER['REQUEST_URI'];
 			ereg(self::$app->getScriptPath() . "(.*)/chk", $uri, $matches);
 			if (md5(SA_SECRET_KEY . $matches[1]) != $_REQUEST['chk']) {
-				throw new URLManipulationException('The client altered the request parameters');
+				throw new URLManipulationException('the client altered the request parameters');
 			}
 		}
 	}
+	
+	/**
+	 * Detects the page name by analyzing the PATH_INFO
+	 */
 	
 	public static function detectPageName() {
 		$pathInfo = explode('/', self::$app->getPathInfo());
@@ -62,6 +84,10 @@ final class SARequest {
 		$_REQUEST[self::$app->getGPPageName()] = $_GET[self::$app->getGPPageName()] = $pageName;		
 	}
 	
+	/**
+	 * Detects the GET parameters by analyzing the PATH_INFO
+	 */
+	
 	public static function detectGETParameters() {		
 		ereg($_GET[self::$app->getGPPageName()] . "(.*)", self::$app->getPathInfo(), $matches);
 		$params = explode('/', $matches[1]);
@@ -70,6 +96,11 @@ final class SARequest {
 			$_REQUEST[$params[$i]] = $_GET[$params[$i]] = self::decodeParam($params[$i + 1]);
 		}
 	}
+	
+	/**
+	 * Decodes the GET parameter
+	 * @param string $value The value of the GET parameter
+	 */
 	
 	public static function decodeParam($value) {
 		$decoded = urldecode($value);

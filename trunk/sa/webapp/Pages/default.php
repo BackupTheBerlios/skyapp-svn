@@ -21,5 +21,5 @@ class Page_default extends DemoPage {
 	}
 	public function doUpdate() {
 		print "update<br>";
-	}	
+	}
 }

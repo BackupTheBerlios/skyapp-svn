@@ -15,4 +15,4 @@
 $Id$
 */
 
-class Page_default extends DemoPage {}
+class Page_nested_default extends DemoPage {}

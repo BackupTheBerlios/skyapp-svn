@@ -1,0 +1,3 @@
+base referer
+rect $interfaceSAIPage.html 5,6 80,30
+rect $classSAPage.html 129,6 199,30

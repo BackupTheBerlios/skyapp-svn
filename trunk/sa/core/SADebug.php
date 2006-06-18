@@ -15,14 +15,31 @@
 $Id$
 */
 
-//TODO: add logging facility
-
+/*! \brief Used for outputing error messages
+ * 
+ */
+ 
 class SADebug {
+	/**
+	 * array with the list of http clients which will be able to see the error messages
+	 */
 	protected static $displayFor = array('127.0.0.1');
 	
+	/**
+	 * adds a client ip to the  allowed http clients which will be able to see the error messages
+	 * @param string $ip the ip address of the http client
+	 */
 	public static function acceptClient($ip) {
 		self::$displayFor[] = $ip;
 	}
+	
+	/**
+	 * logs and displays the specified error message
+	 * @param string $message error message
+	 * @param string $file the file name in which the error occured
+	 * @param string $line the line number from $file where the error occured
+	 * @param string $method the method name where the error occured
+	 */
 	
 	public static function trace($message, $file = __FILE__, $line = __LINE__, $method = __METHOD__) {
 		SALog::log("$file on line $line - $method: $message", SA_LOG_ERROR);

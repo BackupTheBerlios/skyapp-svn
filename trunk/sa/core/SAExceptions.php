@@ -15,5 +15,12 @@
 $Id$
 */
 
+/*! \brief The exception type which will be triggered
+ * if the instantiated class does not implement SAIPage interface
+ */
 class DoesNotImplementSAIPageException extends Exception {}
+
+/*! \brief The exception type which will be triggered
+ * if the user modified the request parameters
+ */
 class URLManipulationException extends Exception {}

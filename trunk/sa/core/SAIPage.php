@@ -15,6 +15,12 @@
 $Id$
 */
 
+
+/*! \brief The Page interface which must be implemented by every page.
+ * 
+ * Contains the required methods needed by the PageHandler 
+ */
+
 interface SAIPage {
 	public function runEvents();
 	public function fetch();

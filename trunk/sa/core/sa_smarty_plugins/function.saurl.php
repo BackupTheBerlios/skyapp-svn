@@ -15,6 +15,10 @@
 $Id$
 */
 
+/*! \brief Smarty plugin for creating valid SA URLs within the template
+ * 
+ */
+
 function smarty_function_saurl($params, &$smarty) {
 	$pageName = $params['page'];
 	$port = ($params['port']) ? $params['port'] : 80;

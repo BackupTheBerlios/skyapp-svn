@@ -15,13 +15,27 @@
 $Id$
 */
 
+/*! \brief Class for handling the pages
+ * 
+ */
+
 final class SAPageHandler {
 	private static $pageObjectCache;
 	private static $app;
 	
+	/**
+	 * Sets the application controller
+	 * @param SApplication $app The application controller instance
+	 */
+	
 	public static function setApplicationObject(SApplication &$app) {
 		self::$app = &$app;
 	}
+	
+	/**
+	 * Handles the page specified by $name
+	 * @param string $name The page name
+	 */
 	
 	public static function handle($name) {
 		$page = null;
@@ -45,13 +59,18 @@ final class SAPageHandler {
 		}
 	}
 	
+	/**
+	 * Factory method for instantiating the page specified by $name
+	 * @param string $name The page name
+	 */
+	
 	public static function &factory($name) {
 		if (is_a(self::$pageObjectCache[$name], 'SAIPage')) {
 			return self::$pageObjectCache[$name];
 		}
 		$page = null;
 		$pageFile = self::$app->getPageSearchDirectory() . "/{$name}.php";
-		$className = 'Page_' . basename($name);		
+		$className = 'Page_' . str_replace('/', '_', $name);
 		if (file_exists($pageFile)) {
 			require_once($pageFile);
 			if (class_exists($className)) {
@@ -68,7 +87,12 @@ final class SAPageHandler {
 		}
 		
 		return $page;
-	}	
+	}
+	
+	/**
+	 * Calls the factory method and throws an exception if the page is not valid
+	 * @param string $name The page name
+	 */
 	
 	private static function &tryToGetPage($name) {
 		$page = null;
