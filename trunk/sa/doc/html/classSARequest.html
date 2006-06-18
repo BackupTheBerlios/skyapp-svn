@@ -10,7 +10,6 @@
     <li><a href="main.html"><span>Main&nbsp;Page</span></a></li>
     <li id="current"><a href="classes.html"><span>Classes</span></a></li>
     <li><a href="files.html"><span>Files</span></a></li>
-    <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
   </ul></div>
 <div class="tabs">
   <ul>
@@ -27,16 +26,25 @@
 <tr><td colspan="2"><br><h2>Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSARequest.html#0e0e11d896c964c97d15b6e9b590217a">setApplicationObject</a> (<a class="el" href="classSApplication.html">SApplication</a> &amp;$app)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSARequest.html#682bc83a709f28eca8848e3ede130ced">init</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the application controller.  <a href="#0e0e11d896c964c97d15b6e9b590217a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="682bc83a709f28eca8848e3ede130ced"></a><!-- doxytag: member="SARequest::init" ref="682bc83a709f28eca8848e3ede130ced" args="()" -->
+static&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSARequest.html#682bc83a709f28eca8848e3ede130ced">init</a> ()</td></tr>
 
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initializes some default attributes for <a class="el" href="classSApplication.html">SApplication</a> instance. <br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSARequest.html#63f4ed0b8665f3f5d921b478b390ed23">checkValidity</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSARequest.html#00a512c001d80d7526b57b4fdfb30800">detectPageName</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Checks if the user altered the request parameters.  <a href="#63f4ed0b8665f3f5d921b478b390ed23"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="00a512c001d80d7526b57b4fdfb30800"></a><!-- doxytag: member="SARequest::detectPageName" ref="00a512c001d80d7526b57b4fdfb30800" args="()" -->
+static&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSARequest.html#00a512c001d80d7526b57b4fdfb30800">detectPageName</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">static&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSARequest.html#ec01589504769ce88580c97f58223cbe">detectGETParameters</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Detects the page name by analyzing the PATH_INFO. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ec01589504769ce88580c97f58223cbe"></a><!-- doxytag: member="SARequest::detectGETParameters" ref="ec01589504769ce88580c97f58223cbe" args="()" -->
+static&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSARequest.html#ec01589504769ce88580c97f58223cbe">detectGETParameters</a> ()</td></tr>
 
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Detects the GET parameters by analyzing the PATH_INFO. <br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSARequest.html#9120fda429a0c9756323cc582764f1f9">decodeParam</a> ($value)</td></tr>
 
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Decodes the GET parameter.  <a href="#9120fda429a0c9756323cc582764f1f9"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Class for handling the HTTP request. 
@@ -68,7 +76,9 @@ Definition at line <a class="el" href="SARequest_8php-source.html#l00022">22</a>
     <td>
 
 <p>
-Checks if the user altered the request parameters. This is done by checking the "chk" GET variable 
+Checks if the user altered the request parameters. 
+<p>
+This is done by checking the "chk" GET variable 
 <p>
 Definition at line <a class="el" href="SARequest_8php-source.html#l00054">54</a> of file <a class="el" href="SARequest_8php-source.html">SARequest.php</a>.
 <p>
@@ -112,7 +122,9 @@ Referenced by <a class="el" href="SApplication_8php-source.html#l00074">SApplica
     <td>
 
 <p>
-Decodes the GET parameter <dl compact><dt><b>Parameters:</b></dt><dd>
+Decodes the GET parameter. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>string</em>&nbsp;</td><td>$value The value of the GET parameter </td></tr>
   </table>
@@ -126,140 +138,6 @@ Definition at line <a class="el" href="SARequest_8php-source.html#l00105">105</a
 <a name="l00109"></a>00109                 }
 <a name="l00110"></a>00110                 <span class="keywordflow">return</span> $decoded;
 <a name="l00111"></a>00111         }
-</pre></div>
-<p>
-    </td>
-  </tr>
-</table>
-<a class="anchor" name="ec01589504769ce88580c97f58223cbe"></a><!-- doxytag: member="SARequest::detectGETParameters" ref="ec01589504769ce88580c97f58223cbe" args="()" --><p>
-<table class="mdTable" cellpadding="2" cellspacing="0">
-  <tr>
-    <td class="mdRow">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td class="md" nowrap valign="top">static SARequest::detectGETParameters           </td>
-          <td class="md" valign="top">(&nbsp;</td>
-          <td class="mdname1" valign="top" nowrap>          </td>
-          <td class="md" valign="top">&nbsp;)&nbsp;</td>
-          <td class="md" nowrap><code> [static]</code></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-<table cellspacing="5" cellpadding="0" border="0">
-  <tr>
-    <td>
-      &nbsp;
-    </td>
-    <td>
-
-<p>
-Detects the GET parameters by analyzing the PATH_INFO 
-<p>
-Definition at line <a class="el" href="SARequest_8php-source.html#l00091">91</a> of file <a class="el" href="SARequest_8php-source.html">SARequest.php</a>.
-<p>
-Referenced by <a class="el" href="SApplication_8php-source.html#l00074">SApplication::__construct()</a>.<div class="fragment"><pre class="fragment"><a name="l00091"></a>00091                                                      {          
-<a name="l00092"></a>00092                 ereg($_GET[self::$app-&gt;getGPPageName()] . <span class="stringliteral">"(.*)"</span>, self::$app-&gt;getPathInfo(), $matches);
-<a name="l00093"></a>00093                 $params = explode(<span class="charliteral">'/'</span>, $matches[1]);
-<a name="l00094"></a>00094                 $length = count($params);
-<a name="l00095"></a>00095                 <span class="keywordflow">for</span>($i = 1; $i &lt; $length - 1; $i += 2) {
-<a name="l00096"></a>00096                         $_REQUEST[$params[$i]] = $_GET[$params[$i]] = self::decodeParam($params[$i + 1]);
-<a name="l00097"></a>00097                 }
-<a name="l00098"></a>00098         }
-</pre></div>
-<p>
-    </td>
-  </tr>
-</table>
-<a class="anchor" name="00a512c001d80d7526b57b4fdfb30800"></a><!-- doxytag: member="SARequest::detectPageName" ref="00a512c001d80d7526b57b4fdfb30800" args="()" --><p>
-<table class="mdTable" cellpadding="2" cellspacing="0">
-  <tr>
-    <td class="mdRow">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td class="md" nowrap valign="top">static SARequest::detectPageName           </td>
-          <td class="md" valign="top">(&nbsp;</td>
-          <td class="mdname1" valign="top" nowrap>          </td>
-          <td class="md" valign="top">&nbsp;)&nbsp;</td>
-          <td class="md" nowrap><code> [static]</code></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-<table cellspacing="5" cellpadding="0" border="0">
-  <tr>
-    <td>
-      &nbsp;
-    </td>
-    <td>
-
-<p>
-Detects the page name by analyzing the PATH_INFO 
-<p>
-Definition at line <a class="el" href="SARequest_8php-source.html#l00069">69</a> of file <a class="el" href="SARequest_8php-source.html">SARequest.php</a>.
-<p>
-Referenced by <a class="el" href="SApplication_8php-source.html#l00074">SApplication::__construct()</a>.<div class="fragment"><pre class="fragment"><a name="l00069"></a>00069                                                 {
-<a name="l00070"></a>00070                 $pathInfo = explode(<span class="charliteral">'/'</span>, self::$app-&gt;getPathInfo());
-<a name="l00071"></a>00071                 $length = count($pathInfo);
-<a name="l00072"></a>00072                 $pageName = ($length == 1) ? self::$app-&gt;getDefaultPageName() : null;
-<a name="l00073"></a>00073                 <span class="keywordflow">if</span> ($length &gt; 1) {
-<a name="l00074"></a>00074                         <span class="keywordflow">for</span>($i = $length; $i &gt; 0; $i--) {
-<a name="l00075"></a>00075                                 $page = implode(<span class="charliteral">'/'</span>, array_slice($pathInfo, 1, $i));
-<a name="l00076"></a>00076                                 <span class="keywordflow">if</span> (is_null($pathInfo[$i])) $page .= <span class="charliteral">'/'</span> . self::$app-&gt;getDefaultPageName();
-<a name="l00077"></a>00077                                 $pageFileName = self::$app-&gt;getPageSearchDirectory() . <span class="stringliteral">"/$page.php"</span>;
-<a name="l00078"></a>00078                                 <span class="keywordflow">if</span> (is_file($pageFileName)) {
-<a name="l00079"></a>00079                                         $pageName = $page;
-<a name="l00080"></a>00080                                         <span class="keywordflow">break</span>;
-<a name="l00081"></a>00081                                 }
-<a name="l00082"></a>00082                         }
-<a name="l00083"></a>00083                 }
-<a name="l00084"></a>00084                 $_REQUEST[self::$app-&gt;getGPPageName()] = $_GET[self::$app-&gt;getGPPageName()] = $pageName;                
-<a name="l00085"></a>00085         }
-</pre></div>
-<p>
-    </td>
-  </tr>
-</table>
-<a class="anchor" name="682bc83a709f28eca8848e3ede130ced"></a><!-- doxytag: member="SARequest::init" ref="682bc83a709f28eca8848e3ede130ced" args="()" --><p>
-<table class="mdTable" cellpadding="2" cellspacing="0">
-  <tr>
-    <td class="mdRow">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td class="md" nowrap valign="top">static SARequest::init           </td>
-          <td class="md" valign="top">(&nbsp;</td>
-          <td class="mdname1" valign="top" nowrap>          </td>
-          <td class="md" valign="top">&nbsp;)&nbsp;</td>
-          <td class="md" nowrap><code> [static]</code></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-<table cellspacing="5" cellpadding="0" border="0">
-  <tr>
-    <td>
-      &nbsp;
-    </td>
-    <td>
-
-<p>
-Initializes some default attributes for <a class="el" href="classSApplication.html">SApplication</a> instance 
-<p>
-Definition at line <a class="el" href="SARequest_8php-source.html#l00038">38</a> of file <a class="el" href="SARequest_8php-source.html">SARequest.php</a>.
-<p>
-Referenced by <a class="el" href="SApplication_8php-source.html#l00074">SApplication::__construct()</a>.<div class="fragment"><pre class="fragment"><a name="l00038"></a>00038                                       {
-<a name="l00039"></a>00039                 self::$app-&gt;setServerName($_SERVER['SERVER_NAME']);
-<a name="l00040"></a>00040                 self::$app-&gt;setServerPort($_SERVER['SERVER_PORT']);
-<a name="l00041"></a>00041                 self::$app-&gt;setServerSecure($_SERVER[<span class="stringliteral">"HTTPS"</span>] == 'on');
-<a name="l00042"></a>00042                 self::$app-&gt;setPathInfo($_SERVER['PATH_INFO']);
-<a name="l00043"></a>00043                 $scriptName = basename($_SERVER['SCRIPT_FILENAME']);
-<a name="l00044"></a>00044                 self::$app-&gt;setScriptName($scriptName);
-<a name="l00045"></a>00045                 ereg(<span class="stringliteral">"^(.*)$scriptName"</span>, $_SERVER['REDIRECT_URL'], $matches);
-<a name="l00046"></a>00046                 self::$app-&gt;setScriptPath($matches[1]); 
-<a name="l00047"></a>00047         }
 </pre></div>
 <p>
     </td>
@@ -290,7 +168,9 @@ Referenced by <a class="el" href="SApplication_8php-source.html#l00074">SApplica
     <td>
 
 <p>
-Sets the application controller <dl compact><dt><b>Parameters:</b></dt><dd>
+Sets the application controller. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em><a class="el" href="classSApplication.html">SApplication</a></em>&nbsp;</td><td>$app The application controller instance </td></tr>
   </table>
@@ -309,7 +189,7 @@ Referenced by <a class="el" href="SApplication_8php-source.html#l00074">SApplica
 </table>
 <hr>The documentation for this class was generated from the following file:<ul>
 <li>public_html/sa-v_0_3/core/<a class="el" href="SARequest_8php-source.html">SARequest.php</a></ul>
-<hr size="1"><address style="align: right;"><small>Generated on Sun Jun 18 16:22:32 2006 for SA PHP Application Framework by&nbsp;
+<hr size="1"><address style="align: right;"><small>Generated on Sun Jun 18 16:39:12 2006 for SA PHP Application Framework by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.6 </small></address>
 </body>

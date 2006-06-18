@@ -37,7 +37,7 @@ class SAUrl {
 	
 	/**
 	 * Returns a valid SA URL
-	 * @param string @page The page name
+	 * @param string $page The page name
 	 * @param array $params The GET parameters specified as a hash
 	 * @param int $port The port number if different than 80
 	 * @param boolean $secure Whether to use https or not

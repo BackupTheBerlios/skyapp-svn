@@ -32,7 +32,7 @@ abstract class SApplication {
 	
 	/**
 	 * this is the home dir of the webapp
-	 * must be set by the inherited class
+	 * must be set by the inheriting class
 	 */	
 	protected $home;
 	/**
@@ -103,7 +103,7 @@ abstract class SApplication {
 	
 	/**
 	 * this is the default destructor
-	 * can be overriden by creating a destructor in the inherited class and not
+	 * can be overriden by creating a destructor in the inheriting class and not
 	 * calling it explicitely
 	 */
 	
