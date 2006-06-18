@@ -8,6 +8,7 @@
 <div class="tabs">
   <ul>
     <li><a href="main.html"><span>Main&nbsp;Page</span></a></li>
+    <li><a href="namespaces.html"><span>Namespaces</span></a></li>
     <li><a href="classes.html"><span>Classes</span></a></li>
     <li id="current"><a href="files.html"><span>Files</span></a></li>
   </ul></div>
@@ -30,7 +31,7 @@
 <a name="l00017"></a>00017 
 <a name="l00021"></a>00021 define('CONTENT_FOR_LAYOUT', 'content_for_layout');
 <a name="l00022"></a>00022 
-<a name="l00027"></a><a class="code" href="classSAPage.html">00027</a> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="classSAPage.html">SAPage</a> <span class="keyword">extends</span> Smarty implements <a class="code" href="interfaceSAIPage.html">SAIPage</a> {
+<a name="l00027"></a><a class="code" href="classSAPage.html">00027</a> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="classSAPage.html">SAPage</a> <span class="keyword">extends</span> <a class="code" href="classSmarty.html">Smarty</a> implements <a class="code" href="interfaceSAIPage.html">SAIPage</a> {
 <a name="l00028"></a><a class="code" href="classSAPage.html#77a8d83910f95f779b587fed57c6ef05">00028</a>         <span class="keyword">protected</span> <a class="code" href="classSAPage.html#77a8d83910f95f779b587fed57c6ef05">$app</a>;
 <a name="l00029"></a><a class="code" href="classSAPage.html#627edd5964bb68c8ca3cdf940e7b9fcc">00029</a>         <span class="keyword">protected</span> <a class="code" href="classSAPage.html#627edd5964bb68c8ca3cdf940e7b9fcc">$name</a>;
 <a name="l00030"></a><a class="code" href="classSAPage.html#5783af276b48d0d094833e3815b216db">00030</a>         <span class="keyword">protected</span> <a class="code" href="classSAPage.html#5783af276b48d0d094833e3815b216db">$layout</a> = '<span class="keywordflow">default</span>.php';
@@ -44,7 +45,7 @@
 <a name="l00042"></a>00042                 <a class="code" href="classSALog.html#e9da20e5f64fb42101d693fbab6ff30f">SALog::log</a>(<span class="stringliteral">"in page $name constructor"</span>, SA_LOG_NOTICE);         
 <a name="l00043"></a>00043                 parent::Smarty();
 <a name="l00044"></a>00044                 $this-&gt;app = &amp;<a class="code" href="classSAPage.html#77a8d83910f95f779b587fed57c6ef05">$app</a>;
-<a name="l00045"></a>00045                 $this-&gt;assign_by_ref('app', <a class="code" href="classSAPage.html#77a8d83910f95f779b587fed57c6ef05">$app</a>);
+<a name="l00045"></a>00045                 $this-&gt;<a class="code" href="classSmarty.html#a3f910aef32523bd7ed582ef6cab7ad0">assign_by_ref</a>('app', <a class="code" href="classSAPage.html#77a8d83910f95f779b587fed57c6ef05">$app</a>);
 <a name="l00046"></a>00046                 $this-&gt;name = <a class="code" href="classSAPage.html#627edd5964bb68c8ca3cdf940e7b9fcc">$name</a>;            
 <a name="l00047"></a>00047                 $this-&gt;<span class="keyword">template</span> = <span class="stringliteral">"{$name}.tpl"</span>;
 <a name="l00048"></a>00048                 $appHome = <a class="code" href="classSAPage.html#77a8d83910f95f779b587fed57c6ef05">$app</a>-&gt;getHomeDirectory();
@@ -67,7 +68,7 @@
 <a name="l00065"></a>00065         
 <a name="l00071"></a><a class="code" href="classSAPage.html#69cb02ecfdc246392d14b17df6d12c32">00071</a>         function <a class="code" href="classSAPage.html#69cb02ecfdc246392d14b17df6d12c32">__set</a>($key, $value) {
 <a name="l00072"></a>00072                 $this-&gt;attributes[$key] = $value;
-<a name="l00073"></a>00073                 $this-&gt;assign($key, $value);
+<a name="l00073"></a>00073                 $this-&gt;<a class="code" href="classSmarty.html#63fc695d58eca87b622ba173849559a7">assign</a>($key, $value);
 <a name="l00074"></a>00074         }
 <a name="l00075"></a>00075         
 <a name="l00080"></a><a class="code" href="classSAPage.html#43e39d304c38e5105baa005a0ed475ba">00080</a>         function <a class="code" href="classSAPage.html#43e39d304c38e5105baa005a0ed475ba">__get</a>($key) {
@@ -203,7 +204,7 @@
 <a name="l00331"></a>00331                 <span class="keywordflow">return</span> $contents;
 <a name="l00332"></a>00332         }       
 <a name="l00333"></a>00333 }
-</pre></div><hr size="1"><address style="align: right;"><small>Generated on Sun Jun 18 16:39:11 2006 for SA PHP Application Framework by&nbsp;
+</pre></div><hr size="1"><address style="align: right;"><small>Generated on Sun Jun 18 16:44:48 2006 for SA PHP Application Framework by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.6 </small></address>
 </body>

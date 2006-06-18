@@ -82,7 +82,8 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 # configuration options related to the input files
 #---------------------------------------------------------------------------
-INPUT                  = /home/andi/public_html/sa-v_0_3/core/
+INPUT                  = /home/andi/public_html/sa-v_0_3/core/ \
+                         /home/andi/public_html/sa-v_0_3/lib/Smarty-2.6.14/
 FILE_PATTERNS          = *.c \
                          *.cc \
                          *.cxx \

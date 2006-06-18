@@ -1,2 +1,3 @@
 base referer
-rect $interfaceSAIPage.html 5,7 80,31
+rect $classSmarty.html 5,7 69,31
+rect $interfaceSAIPage.html 93,7 168,31
