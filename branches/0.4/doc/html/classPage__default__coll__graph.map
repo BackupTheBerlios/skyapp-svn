@@ -1,0 +1,5 @@
+base referer
+rect $classDemoPage.html 40,156 128,180
+rect $classSAPage.html 49,81 119,105
+rect $classSmarty.html 5,7 69,31
+rect $interfaceSAIPage.html 93,7 168,31
