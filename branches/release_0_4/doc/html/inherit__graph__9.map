@@ -1,0 +1,10 @@
+base referer
+rect $interfaceSAIPage.html 6,78 80,102
+rect $classSAPage.html 156,78 226,102
+rect $classDemoPage.html 303,78 391,102
+rect $classPage__404.html 474,6 556,30
+rect $classPage__default.html 466,54 564,78
+rect $classPage__nested__default.html 442,102 588,126
+rect $classPage__phpinfo.html 463,150 567,174
+rect $classSmarty.html 11,126 75,150
+rect $classSmarty__Compiler.html 128,126 254,150
