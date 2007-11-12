@@ -1,4 +1,6 @@
 <?php
+ob_start();
+
 //defines for SA
 define('SA_HOME_DIR', dirname(__FILE__) . '/');
 define('SA_CORE_DIR', SA_HOME_DIR . 'sa/');

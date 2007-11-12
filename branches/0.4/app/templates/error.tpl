@@ -1,0 +1,1 @@
+<div style="color:red"><b>An error occured</b>: {$error->getMessage()}</div>
