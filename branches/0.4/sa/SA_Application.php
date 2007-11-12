@@ -53,7 +53,7 @@ if(window.addEventListener){ // Mozilla, Netscape, Firefox
 function addPoweredBy() {
 	powered = document.createElement('p');
 	powered.setAttribute('id', 'poweredBy');	
-	powered.innerHTML = '&bull; Powered by <a href="http://www.skyweb.ro" target="_blank">SA PHP Framework</a> &bull;';
+	powered.innerHTML = '&bull; Powered by <a href="http://www.skyweb.ro" target="_blank">SA PHP Framework</a> &bull; Execution time: <?= (microtime() - $this->startTime) ?> sec. &bull;';
 	
 	if (typeof(window.innerHeight) == 'number') {
 		//Non-IE
@@ -178,6 +178,8 @@ function addPoweredBy() {
 	public function init() {
 		session_name(SA_SESSION_NAME);
 		session_start();
+		
+		$this->startTime = microtime();
 		
 		$this->setServerName($_SERVER['SERVER_NAME']);
 		$this->setServerPort($_SERVER['SERVER_PORT']);
