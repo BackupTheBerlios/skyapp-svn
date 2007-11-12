@@ -10,7 +10,7 @@ class SA_Url {
 			$url .= ($port == 80) ? '' : ":$port";
 		} 
 		$url .= $app->getScriptPath();
-		$url .= '/';
+		$url .= (strlen($app->getScriptPath()) == 1) ? '' : '/';
 		$pageName = (is_null($page)) ? $app->getDefaultPageName() : $page;
 		if (ereg("^/", $pageName)) {
 			$pageName = substr($pageName, 1);
