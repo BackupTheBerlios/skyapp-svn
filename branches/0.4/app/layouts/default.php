@@ -1,6 +1,12 @@
 <html>
 <head>
 	<base href="<?= SA_Url::baseHref() ?>">
+	<style>
+		body {
+			margin-top: 5px;
+			margin-left: 5px;
+		}
+	</style>
 </head>
 <body topmargin="0" bottommargin="0">
 <h1>Congratulations, SA is up and running!</h1>

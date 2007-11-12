@@ -20,10 +20,6 @@ class SA_Application {
 	public function __destruct() {
 ?>
 <style>
-	body {
-		margin-top: 5px;
-		margin-left: 5px;
-	}
 	p#poweredBy {
 		font-family : arial, helvetica, serif;
 		font-weight: bold;
