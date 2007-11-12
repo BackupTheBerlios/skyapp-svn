@@ -174,6 +174,7 @@ window.onload = function() {
 	}
 	
 	public function init() {
+		session_name(SA_SESSION_NAME);
 		session_start();
 		
 		$this->setServerName($_SERVER['SERVER_NAME']);

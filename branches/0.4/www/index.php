@@ -1,4 +1,6 @@
 <?php
+ob_start();
+
 require_once('../sa.php');
 
 try {

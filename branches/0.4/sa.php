@@ -1,10 +1,10 @@
 <?php
-ob_start();
-
 //defines for SA
 define('SA_HOME_DIR', dirname(__FILE__) . '/');
 define('SA_CORE_DIR', SA_HOME_DIR . 'sa/');
 define('SA_SMARTY_DIR', SA_HOME_DIR . '/vendor/Smarty-2.6.18/libs/');
+define('SA_SESSION_NAME', 'sid');
+define('SA_SESSION_FORCE_COOKIES', true);
 
 //includes for SA
 require_once(SA_SMARTY_DIR . '/Smarty.class.php');
