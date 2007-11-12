@@ -44,7 +44,13 @@ class SA_Application {
 </style>
 
 <script language="JavaScript">
-window.onload = function() {
+if(window.addEventListener){ // Mozilla, Netscape, Firefox
+	window.addEventListener('load', addPoweredBy, false);
+} else { // IE
+	window.attachEvent('onload', addPoweredBy);
+}
+
+function addPoweredBy() {
 	powered = document.createElement('p');
 	powered.setAttribute('id', 'poweredBy');	
 	powered.innerHTML = '&bull; Powered by <a href="http://www.skyweb.ro" target="_blank">SA PHP Framework</a> &bull;';
