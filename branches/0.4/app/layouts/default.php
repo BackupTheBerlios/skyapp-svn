@@ -8,7 +8,7 @@
 		}
 	</style>
 </head>
-<body topmargin="0" bottommargin="0">
+<body>
 <h1>Congratulations, SA is up and running!</h1>
 <div><b>Page name</b>: <?= $this->getName() ?></div>
 <div><b>Layout</b>: <?= $this->app->getApplicationDirectory() . 'layouts/' . $this->getLayout() ?></div>
